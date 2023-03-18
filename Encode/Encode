@@ -1,17 +1,14 @@
 #include <stdio.h>
 #include <ctype.h>
-/*Sebastian Infante Murguia U04743487
-This program will take in input from the command line arguments and then encode it. It will create an output array thats sized argc - 1 and a pointer p that will point at the output array.
-Then it will check if there is more than 1 argument in the command line, if there is the program will run and encode the arguments, if there isn't the program will return Invalid Input.
-Using a for loop the program will send every element in argv into the encode function and within the encode function the argument will be encoded and then append to the output array in
-the address that pointer p is pointing at. After all the elements in argv have been encoded it will print out the encoded elements as a string */
+/*
+This program will take in input from the command line arguments and then encode it. 
+*/
 
 /*Initializes the encode function*/
 void encode(char *input, char *output);
 
 /*Initializes the main function*/
 int main(int argc, char *argv[]){
-	/*Initializes the array output to argc - 1 spaces, pointer p, and i which will be used as a counter*/
 	char output[1000 + 1], *p;
 	int i;
 	/*Sets pointer p to point into array output*/
@@ -25,14 +22,11 @@ int main(int argc, char *argv[]){
 			while(*p != '\0')
 				p++;				
 		}
-		/*Prints the output array as a string*/
 		printf("Output: %s\n", output);
-		/*Ends the program*/
 		return 0;		
 	}
 	/*If there was only one argument in the command line then it will print invalid input and end the program*/
 	else printf("Invalid input!\n");
-	
 	return 0;
 }
 /*This function will encode the values it recives as input and append them to the array connected to output*/
