@@ -1,6 +1,3 @@
-#Trivia Questions
-#Sebastian Infante Murguia(Driver)U04743487
-#Jefferson Munoz-Calle(Navigator)U68474144
 #A program that contains the questions, the answer choices, and the right answers, and will use the class to put them together and append them to a list
 
 
