@@ -1,6 +1,3 @@
-#Driver Program
-#Sebastian Infante Murguia(Driver)U04743487
-#Jefferson Munoz-Calle(Navigator)U68474144
 #A program that will run a trivia game for 2 people, 5 questions for each player, and will count how many answers each players get right and also
 #tell them if they got an answer wrong and what the correct one was, at the end it will tell the player who won or if it was a tie, it will say that it was a tie.
 
