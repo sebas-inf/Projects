@@ -1,6 +1,3 @@
-#This program takes user input for two types of clothing items at a retail store, it's current stock, and it's listed
-#price. It will format the user's input in a neat table, that displays all of the inputted information. 
-
 class Retail_Item:
     def __init__(self, i_type, stock, price):
         self.i_type = i_type
