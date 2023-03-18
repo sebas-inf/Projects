@@ -2,15 +2,10 @@
 #include <ctype.h>
 #define LEN 200
 /*
-Sebastian Infante Murguia U04743487
-This program will take in 2 strings of at most 200 characters(+1 to account for the null character) and it will append them to str1 and str2. It will then set pointers p and q equal to str1 and str2 respectively. 
-It will then iterare over the values of *p using a for loop and it will set the values of pointers p and q to their lower case equivalent each run of the loop. Then it will use a  while loop to check if the 
-character in *p is not equal to *q, if they are not equal and if pointer *q is not at the null character it will iterate over the lower case value of pointer *q until it is equal to pointer *p or it reaches the 
-end of the string. Then it will check if pointer *p is at the null value, if it is then it will return yes, if not then it will return no.
+This program will find if str1 is a subsequence of str2
 */
 /*Initializes the main function*/
 int main(){
-	/*Initializes the arrays for the strings to 200 + 1 in case the string is of 200 characters to ensure that there is space for the null value*/
 	char str1[LEN + 1];
 	char str2[LEN + 1];
 	/*Prompts the user to enter the first word and appends it to str1*/
@@ -24,7 +19,6 @@ int main(){
 	/*Sets pointers p and q to strings str1 and str2 respectively*/
 	p = str1;
 	q = str2;
-	/*This loop will run until pointer p reaches its null value*/
 	for(p = str1; *p != '\0'; p++){
 		/*Sets the values in pointer p and pointer q to their lower case equivalent at the start of each loop*/
 		*p = tolower(*p);
