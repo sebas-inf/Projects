@@ -1,6 +1,3 @@
-#Retail items
-#Sebastian Infante(Navigator)U04743487
-#Benjamin(Driver)U61105360
 #This program takes user input for two types of clothing items at a retail store, it's current stock, and it's listed
 #price. It will format the user's input in a neat table, that displays all of the inputted information. 
 
