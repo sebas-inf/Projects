@@ -1,6 +1,3 @@
-#Question Class
-#Sebastian Infante Murguia(Navigator)U04743487
-#Jefferson Munoz-Calle(Driver)U68474144
 #A program that contains a class that will manage questions and of the answer to said question is right it will award a point.
 
 class Question:
