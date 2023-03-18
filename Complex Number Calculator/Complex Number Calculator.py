@@ -1,8 +1,3 @@
-#Programming Exam 1
-#Sebastian Infante Murguia
-#U04743487
-#A program that will calculate complex number, it can add them, substract them, multiply them ,and divide them.
-
 def menu():
     print('1-Addition')
     print('2-Substraction')
