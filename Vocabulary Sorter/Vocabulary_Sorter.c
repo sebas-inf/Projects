@@ -4,19 +4,14 @@
 #define LEN 1000
 
 /*
-Sebastian Infante Murguia U04743487
-This program will take in 2 files from the command-line arguments. It will then open those files, one to read and the other to write. It will read all the strings in one file and append
-them to an array. Then all the strings in the array will be set to their upper case equivalent and sorted in the selection sort function. Then only the first instance of each string
-will be appended to the array of strings to be written to the other file. Then a loop will run until all the values in the array are written and enumerated in the new file. 
+This program will take in 2 file names from the command-line arguments, get the unique words in the input file, and then it will write each unique word
+into the output file and enumerate them.
 */
 
-/*Initializes the selection sort function*/
 void selection_sort(char vocab[][LEN + 1], int num);
 
-/*Initializes main function*/
 int main(int argc, char *argv[]){
 
-	/*Declaration of variables, array of strings, and files*/
 	char vocab[LEN + 1][LEN + 1];
 	char ret[LEN + 1][LEN + 1];
 	FILE *rFile, *wFile;
@@ -25,7 +20,7 @@ int main(int argc, char *argv[]){
 	/*Will run if theres more than one command-line argument*/
 	if(argc > 1){
 
-		/*Opens the files given for reading and writing and sets them to rFile and wFile respectively*/
+		/*Opens the files given for reading and writing*/
 		rFile = fopen(argv[1], "r");
 		wFile = fopen(argv[2], "w");
 
@@ -51,7 +46,6 @@ int main(int argc, char *argv[]){
 				vocab[i][j] = toupper(vocab[i][j]);	
 		}
 		
-		/*Selection sort call*/
 		selection_sort(vocab, num);
 		
 		/*Adds the first value in the sorted vocab array to the return array*/
@@ -81,24 +75,19 @@ int main(int argc, char *argv[]){
 	/*If there was less than one command-line argument it will print a message*/
 	else printf("Invalid Input");
 
-	/*Closes the file that was read*/
 	fclose(rFile);
 
-	/*Closes the file that the program wrote into*/
 	fclose(wFile);
 
-	/*Ends the program*/
 	return 0;
 }
 
 /*This function will organize all the strings in the vocab array alphabetically*/
 void selection_sort(char vocab[][LEN + 1], int num){
 
-	/*Initializes variables*/
 	int i, largest = 0;
 	char temp[LEN + 1];
 
-	/*If there is only one value in the array then everything has been sorted*/
 	if(num == 1)
 		return;
 
@@ -115,7 +104,6 @@ void selection_sort(char vocab[][LEN + 1], int num){
 		strcpy(vocab[largest], temp);
 	}
 
-	/*Recursive call of selection_sort to sort the entire array*/
 	selection_sort(vocab, num - 1);
 }
 
