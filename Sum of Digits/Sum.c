@@ -1,8 +1,7 @@
 #include <stdio.h>
 /*
 Take in a input from the user in the range of 0 to 10^12, then send the input to sums
-where the 
-of digits will be obtained.
+where the of digits will be obtained.
 */
 
 /*Initializing the sums function*/
